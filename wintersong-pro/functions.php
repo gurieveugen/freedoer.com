@@ -31,7 +31,7 @@ add_theme_support( 'custom-header', array(
 	'admin-preview-callback' => 'wintersong_admin_header_callback',
 	'default-text-color'     => '000000',
 	'header-selector'        => '.site-header .site-avatar img',
-	'height'                 => 224,
+	'height'                 => 0,
 	'width'                  => 224,
 	'wp-head-callback'       => 'wintersong_header_callback',
 ) );
@@ -142,7 +142,7 @@ add_action( 'genesis_header', 'genesis_footer_markup_close', 13 );
 add_filter( 'genesis_footer_output', 'wintersong_custom_footer' );
 function wintersong_custom_footer( $output ) {
 
-	$output = sprintf( '<p>%s<a href="http://www.studiopress.com/">%s</a></p>',  __( 'Powered by ', 'wintersong' ), __( 'Genesis', 'wintersong' ) );
+	$output = '';
 	return $output;
 
 }
@@ -153,3 +153,12 @@ genesis_register_sidebar( array(
 	'name'        => __( 'After Entry', 'wintersong' ),
 	'description' => __( 'This is the widget that appears after the entry on single posts.', 'wintersong' ),
 ) );
+
+register_sidebar(array(
+	'id' => 'before-comments-sidebar',
+	'name' => 'Before comments Sidebar',
+	'before_widget' => '<div class="widget %2$s" id="%1$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3>',
+	'after_title' => '</h3>'
+	));

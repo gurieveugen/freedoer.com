@@ -1302,3 +1302,45 @@ Media Queries
 	}
 
 }
+
+.author-holder .soc{
+	padding:0;
+	margin:0;
+	list-style:none;
+	text-align:center;
+}
+.author-holder .soc li{
+	display:inline-block;
+	margin:0 5px 0 0;
+}
+.author-holder .soc a{
+	display:block;
+	width:30px;
+	height:30px;
+	text-indent:-9999px;
+	overflow:hidden;
+	border:none;
+}
+.author-holder .soc .twitter a{
+	background:url(http://freedoer.com/wp-content/uploads/2013/12/twitter-gray.png) no-repeat;
+}
+.author-holder .soc .googleplus a{
+	background:url(http://freedoer.com/wp-content/uploads/2013/12/googleplus-gray.png) no-repeat;
+	width:29px;
+}
+.author-holder .soc .linkedin a{
+	width:29px;
+	background:url(http://freedoer.com/wp-content/uploads/2013/12/linkedin.png) no-repeat;
+}
+
+.author-holder .image-box{
+	float:left;
+	margin:0 20px 0 0;
+}
+.author-holder .image-box img{
+	display:block;
+	padding:0;
+	margin:0 0 10px;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+}

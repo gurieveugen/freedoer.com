@@ -138,7 +138,7 @@ add_action( 'genesis_pings', 'genesis_do_pings' );
 function genesis_do_pings() {
 
 	global $wp_query;
-
+	dynamic_sidebar('before-comments-sidebar');
 	//* Bail if trackbacks are off for this post type
 	if ( ( is_page() && ! genesis_get_option( 'trackbacks_pages' ) ) || ( is_single() && ! genesis_get_option( 'trackbacks_posts' ) ) )
 		return;
